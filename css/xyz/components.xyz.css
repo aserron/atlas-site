@@ -1,0 +1,16 @@
+.navbar-logo-svg {
+    background-color: rgba(0,0,0,.5);
+    mask: url(../../assets/svg/xyz_nav_logo.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-origin: content-box;
+    -webkit-mask: url(../../assets/svg/xyz_nav_logo.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-origin: content-box;
+    min-width: 7em;
+}
+
+.navbar-logo-svg:hover {
+    background-color: rgba(0,0,0,.7);
+}
