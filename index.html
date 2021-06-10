@@ -230,6 +230,8 @@
 
       #content-2 {
         /*background-image: url("./assets/trace/trace_02.jpg");*/
+        width:100%;
+        padding: 0;
         background-color: #452966;
       }
 
@@ -255,7 +257,8 @@
         background-color: #35373d;
         max-width: 1440px;
       }
-
+      
+      
       .x-sec01-msg-01 {
         font-family: Prompt;
         font-size: 60px;
@@ -364,7 +367,8 @@
 
       .x-section-01 {
         /*border: 1px solid blue;*/
-
+        width:100%;
+        box-sizing: border-box;
         background-image: url("./assets/sec_01_bkg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -375,16 +379,19 @@
       .x-section-01 .sec01-top-pad {
         /*border: 1px solid red;*/
 
-        height: 269px;
+        height: 469px;
       }
-
+      .x-row-content {
+          width: 100%;
+          margin-bottom: 48px;
+      }
       .x-section-01 {
         vertical-align: middle;
         color: white;
       }
 
       .x-section-02-row-01 {
-        height: 180px;
+        height: 124px;
         margin: 0px;
         padding: 0px;
       }
@@ -410,7 +417,7 @@
         flex-direction: column;
         flex-basis: auto;
 
-        padding: 20px;
+        padding: 48px 24px;
       }
 
       .x-sec02-icon {
@@ -422,6 +429,7 @@
 
       div.sec01-text {
         /*height: 80%;*/
+      
         background-color: rgba(0, 0, 0, 0.7);
         background-blend-mode: overlay;
       }
@@ -436,6 +444,9 @@
         margin: 8px;
       }
       .clients-container h3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         text-align: center;
         height: 134px;
         letter-spacing: 2px;
@@ -666,7 +677,7 @@
         </div>
       </nav>
 
-      <main class="container-fluid p-0 m-0">
+      <main class="main">
         <section
           class="
             row
@@ -685,18 +696,18 @@
           </div>
 
           <!-- 2nd row hold the actual content, grow full width at mobile-->
-          <div class="row x-row-content m-0 p-0">
+          <div class="row x-row-content  p-0">
             <div
               class="
-                col-12 col-md-10
+                
                 d-flex
                 align-items-start
                 sec01-text
-                m-0
+               
                 p-0
               "
             >
-              <div id="sec01-msg">
+              <div class="sec01-msg">
                 <h3 class="x-sec01-msg-01">We Build Applications for Web3.0</h3>
                 <p class="x-sec01-msg-02">
                   Peer to peer application development doesn’t have to be
