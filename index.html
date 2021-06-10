@@ -60,7 +60,10 @@
         font-style: normal;
         color: white;
       }
-
+      ul {
+        margin: 0;
+        padding: 0;
+      }
       h1,
       h2 {
         font-weight: bolder;
@@ -73,7 +76,6 @@
       }
 
       body {
-    
         background-color: darkslategrey;
       }
 
@@ -116,8 +118,9 @@
 
       .page-footer {
         color: white;
-
         background-image: url("./assets/footer bkg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       .page-footer hr {
@@ -300,13 +303,13 @@
         background-color: #452966;
         background-repeat: no-repeat;
         background-size: cover;
-        
-   
-
-       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 800px;
+        max-width: 100vw;
       }
-
-      
     </style>
 
     <style>
@@ -423,7 +426,44 @@
         background-blend-mode: overlay;
       }
 
-
+      .client-links {
+        display: flex;
+        justify-content: center;
+      }
+      .client-links a {
+        display: flex;
+        justify-content: center;
+        margin: 8px;
+      }
+      .clients-container h3 {
+        text-align: center;
+        height: 134px;
+        letter-spacing: 2px;
+        font-size: 38px;
+      }
+      .top {
+        display: flex;
+        padding: 24px;
+      }
+      .info-links {
+        display: flex;
+        align-items: flex-end;
+      }
+      .info-links ul {
+        flex-direction: column;
+      }
+      .footer-emails {
+        display: flex;
+      }
+      .contact-title {
+        font-family: Prompt;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
       @media (max-width: 468px) {
         body {
           max-width: 100%;
@@ -456,18 +496,19 @@
           flex-wrap: nowrap;
         }
 
-        .client-links   {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .client-links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
         }
-        .client-links  a {
-            display: flex;
-            justify-content: center;
+        .client-links a {
+          display: flex;
+          justify-content: center;
         }
         .x-btn-became {
           background-image: url("./assets/btn-become.png");
-           
+
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center center;
@@ -507,14 +548,15 @@
         }
         .page-footer {
           max-width: 100%;
+
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding:  16px 0px;
+          padding: 16px 0px;
           margin-bottom: 0;
         }
         .x-footer-contact {
-          display: none;
+          flex-direction: row;
         }
         .xyz-logo-link img {
           width: 105px;
@@ -528,17 +570,25 @@
           justify-content: center;
           width: 100%;
         }
-        .clients-container h3{
-             
-                text-align: center;
-                height: 72px;
-                letter-spacing: 2px;
+        .clients-container h3 {
+          text-align: center;
+          height: 72px;
+          letter-spacing: 2px;
         }
-        .info-links{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .info-links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
+        .email {
+            display: none;
+        }
+        .info-links ul {
+        flex-direction: row;
+      }
+      .top{
+          flex-direction: column;
+      }
       }
 
       #div.debug.row {
@@ -735,38 +785,35 @@
         <!-- Clients Labels [md+] + Button [all] rem: .trace -->
         <section id="content-4" class="clients-container">
           <h3>Latest Clients</h3>
-          <div class="client-links metaverse-bkg">
-            <a href="#" class=" svg ">
-              <img src="./assets/svg/client_koI.svg" class="xyz-client-svg"
-            /></a>
+          <div class="metaverse-bkg">
+            <div class="client-links">
+              <a href="#" class="svg">
+                <img src="./assets/svg/client_koI.svg" class="xyz-client-svg"
+              /></a>
 
-            <a href="#" class=" svg">
-              <img src="./assets/svg/client_key.svg" class="xyz-client-svg"
-            /></a>
-
-             <a class="btn x-btn-became"></a>
+              <a href="#" class="svg">
+                <img src="./assets/svg/client_key.svg" class="xyz-client-svg"
+              /></a>
+            </div>
+            <a class="btn x-btn-became"></a>
           </div>
-
-         
         </section>
       </main>
 
       <!-- Footer section -->
       <footer class="page-footer">
         <div class="">
-          <div class="">
-            
-              <div class="footer-row">
-                <a class="xyz-logo-link" href="#">
-                  <img
-                    src="./assets/svg/xyz_nav_logo.svg"
-                    alt=".xyz logo"
-                    width="218"
-                    height="83"
-                  />
-                </a>
-              </div>
-           
+          <div class="top">
+            <div class="footer-row">
+              <a class="xyz-logo-link" href="#">
+                <img
+                  src="./assets/svg/xyz_nav_logo.svg"
+                  alt=".xyz logo"
+                  width="218"
+                  height="83"
+                />
+              </a>
+            </div>
 
             <div class="footer-row">
               <!--  social media -->
@@ -798,41 +845,42 @@
           </div>
 
           <!-- 2nd Row: foot nav + contacto -->
+
           <div class="info-links">
-          
-              <ul class="nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Company</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Mission</a>
-                </li>
-              </ul>
-        
+            <ul class="nav x-footer-contact about-links">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Company</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Team</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Mission</a>
+              </li>
+            </ul>
 
-            <div class="">
-              <h3 class="" style="color: #3acebc">Contact Us</h3>
-
+            <div class="footer-emails">
               <ul class="nav flex-column x-footer-contact">
-                <li class="nav-item">
+                  <li class="nav-item">
+                      <h3 class="contact-title nav-link" style="color: #3acebc">Contact Us</h3>
+                  </li>
+                
+                <li class="nav-item email">
                   <a href="mailto:hello@tech.nology.xyz" class="nav-link"
                     >hello@tech.nology.xyz</a
                   >
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item email">
                   <a href="mailto:solutions@tech.nology.xyz" class="nav-link"
                     >solutions@tech.nology.xyz</a
                   >
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item email">
                   <a href="mailto:developer@tech.nology.xyz" class="nav-link"
                     >developer@tech.nology.xyz</a
                   >
@@ -840,7 +888,7 @@
               </ul>
             </div>
 
-            <div class="">
+            <div class="footer-emails email">
               <ul class="nav flex-column x-footer-contact">
                 <li class="nav-item">
                   <a href="mailto:defi@tech.nology.xyz" class="nav-link"
