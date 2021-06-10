@@ -236,7 +236,8 @@
 
       #content-4 {
         /*background-image: url("./assets/trace/trace_04.jpg");*/
-        background-image: url("./assets/multi_bkg.png");
+        background-image: url("./assets/metaverse.svg");
+        background-size: contain;
       }
 
       #content-5 {
@@ -295,7 +296,7 @@
       }
 
       .metaverse-bkg {
-        background-image: url("./assets/we_operate_bkg.png");
+        background-image: url("./assets/metaverse.svg");
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: contain;
@@ -432,7 +433,8 @@
 
       @media (max-width: 468px) {
         body {
-          max-width: 100vw;
+          max-width: 100%;
+          overflow-x: hidden;
         }
         .x-section-01 {
           max-width: 100%;
@@ -480,6 +482,34 @@
         .x-sec01-msg-02 {
             background-color: rgba(0, 0, 0, 0.7);
           background-blend-mode: overlay;
+        }
+        .x-section-02-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .x-sec02-icon-ct {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16;
+        }
+        .x-sec02-icon-ct p{
+            font-size: 16px;
+            width:300px;
+        }
+        .page-footer {
+            max-width: 100%;
+        }
+        .x-footer-contact {
+            display: none;
+        }
+        .xyz-logo-link img {
+            width:105px;
+            height:auto;
+        }
+        .nav-link {
+            font-size: 12px;
         }
       }
 
@@ -609,7 +639,7 @@
         <section
           id="content-2"
           class="row g-0 x-section-02-row"
-          style="height: 650px"
+          
         >
           <div class="row x-section-02-row-01 align-items-center p-0">
             <div class="col-12 text-center text-white">
@@ -712,21 +742,6 @@
           </div>
         </section>
 
-        <!-- Metaverse Banner     -->
-        <section
-          id="content-5"
-          class="row metaverse-bkg p-0 m-0 justify-content-center align-middle"
-        >
-          <div class="col-12 text-center align-self-center">
-            <img
-              class="metaverse-img"
-              src="./assets/we_operate_txt.svg"
-              height="213"
-              width="549"
-              alt="we operate moto"
-            />
-          </div>
-        </section>
       </main>
 
       <!-- Footer section -->
@@ -754,21 +769,21 @@
                     class="bi-discord icon-4x"
                     style="font-size: 2rem; color: cornflowerblue"
                   ></span>
-                  Discord</a
+                  </a
                 >
                 <a href="#sdl" class="nav-link">
                   <span
                     class="bi-envelope icon-4x"
                     style="font-size: 2rem; color: cornflowerblue"
                   ></span>
-                  Discord</a
+                 </a
                 >
                 <a href="#sdl" class="nav-link">
                   <span
                     class="bi-telegram icon-4x"
                     style="font-size: 2rem; color: cornflowerblue"
                   ></span
-                  >Telegram</a
+                  ></a
                 >
               </nav>
 
